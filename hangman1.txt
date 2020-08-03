@@ -1,0 +1,63 @@
+import random
+
+print("H A N G M A N")
+input('Type "play" to play the game, "exit" to quit:')
+words = random.choice(['python', 'java', 'javascript', 'kotlin'])
+hints = list("-" * len(words))
+guess_letters = []
+attempts = 0
+while attempts < 8:
+        print()
+        print("".join(hints))
+        input1 = input("Input a letter:")
+        if len(input1) != 1:
+            print("You should input a single letter")
+        elif not input1.islower():
+            print("It is not an ASCII lowercase letter")
+        elif input1 in words:
+            if input1 in guess_letters:
+                print("You already typed this letter")
+            else:
+                for i in range(len(words)):
+                    if words[i] == input1:
+                        hints[i] = input1
+                guess_letters.append(input1)
+        elif input1 in guess_letters:
+            print("You already typed this letter")
+        else:
+            print("No such letter in the word")
+            guess_letters.append(input1)
+            attempts += 1
+        if words == hints:
+            print("You guessed the word!\nYou survived!")
+            break
+    
+else:
+    print("You are hanged!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
