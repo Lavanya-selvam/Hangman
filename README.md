@@ -1,5 +1,5 @@
 # Hangman
-# In the main menu, a player can choose to either play or exit the game;
+In the main menu, a player can choose to either play or exit the game;
 If the user chooses to play, the computer picks a word from a list: this will be the riddle;
 The computer asks the player to enter a letter that (s)he thinks is in the word;
 If there's no such letter in the word and this letter hasn't been tried before, the computer counts it as a miss. A player can afford only up to 8 misses before the game is over;
